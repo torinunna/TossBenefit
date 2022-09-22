@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  BenefitListViewController.swift
 //  TossBenefit
 //
 //  Created by YUJIN KWON on 2022/09/22.
@@ -7,13 +7,13 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class BenefitListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
+        navigationItem.title = "혜택"
+        
     }
-
-
+   
 }
-

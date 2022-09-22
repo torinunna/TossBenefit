@@ -9,13 +9,13 @@
 /* Begin PBXBuildFile section */
 		865C730128DC84850046AF9B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865C730028DC84850046AF9B /* AppDelegate.swift */; };
 		865C730328DC84850046AF9B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865C730228DC84850046AF9B /* SceneDelegate.swift */; };
-		865C730528DC84850046AF9B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865C730428DC84850046AF9B /* ViewController.swift */; };
 		865C730828DC84850046AF9B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 865C730628DC84850046AF9B /* Main.storyboard */; };
 		865C730A28DC84880046AF9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 865C730928DC84880046AF9B /* Assets.xcassets */; };
 		865C730D28DC84880046AF9B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 865C730B28DC84880046AF9B /* LaunchScreen.storyboard */; };
 		865C731828DC84880046AF9B /* TossBenefitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865C731728DC84880046AF9B /* TossBenefitTests.swift */; };
 		865C732228DC84880046AF9B /* TossBenefitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865C732128DC84880046AF9B /* TossBenefitUITests.swift */; };
 		865C732428DC84880046AF9B /* TossBenefitUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865C732328DC84880046AF9B /* TossBenefitUITestsLaunchTests.swift */; };
+		865C733328DC885C0046AF9B /* BenefitListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865C733228DC885C0046AF9B /* BenefitListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +39,6 @@
 		865C72FD28DC84850046AF9B /* TossBenefit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TossBenefit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		865C730028DC84850046AF9B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		865C730228DC84850046AF9B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		865C730428DC84850046AF9B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		865C730728DC84850046AF9B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		865C730928DC84880046AF9B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		865C730C28DC84880046AF9B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +48,7 @@
 		865C731D28DC84880046AF9B /* TossBenefitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TossBenefitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		865C732128DC84880046AF9B /* TossBenefitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TossBenefitUITests.swift; sourceTree = "<group>"; };
 		865C732328DC84880046AF9B /* TossBenefitUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TossBenefitUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		865C733228DC885C0046AF9B /* BenefitListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BenefitListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,8 +101,8 @@
 			children = (
 				865C730028DC84850046AF9B /* AppDelegate.swift */,
 				865C730228DC84850046AF9B /* SceneDelegate.swift */,
-				865C730428DC84850046AF9B /* ViewController.swift */,
 				865C730628DC84850046AF9B /* Main.storyboard */,
+				865C733228DC885C0046AF9B /* BenefitListViewController.swift */,
 				865C730928DC84880046AF9B /* Assets.xcassets */,
 				865C730B28DC84880046AF9B /* LaunchScreen.storyboard */,
 				865C730E28DC84880046AF9B /* Info.plist */,
@@ -258,7 +258,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				865C730528DC84850046AF9B /* ViewController.swift in Sources */,
+				865C733328DC885C0046AF9B /* BenefitListViewController.swift in Sources */,
 				865C730128DC84850046AF9B /* AppDelegate.swift in Sources */,
 				865C730328DC84850046AF9B /* SceneDelegate.swift in Sources */,
 			);

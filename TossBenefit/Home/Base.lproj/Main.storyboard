@@ -3,6 +3,8 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -28,31 +30,127 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MyPointCell" id="tzM-4K-AfX" customClass="MyPointCell" customModule="TossBenefit" customModuleProvider="target">
-                                        <rect key="frame" x="1.5" y="0.0" width="411" height="107"/>
+                                        <rect key="frame" x="5.5" y="0.0" width="403" height="120"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="eqw-8H-qEk">
-                                            <rect key="frame" x="0.0" y="0.0" width="411" height="107"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="403" height="120"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="to7-u6-QX0">
+                                                    <rect key="frame" x="8" y="25" width="70" height="70"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="70" id="7kK-ue-yh2"/>
+                                                        <constraint firstAttribute="width" constant="70" id="9Fx-fQ-F3n"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cbi-Yv-92l">
+                                                    <rect key="frame" x="98" y="36" width="40" height="18"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                    <color key="textColor" systemColor="systemGrayColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9hN-1i-WuH">
+                                                    <rect key="frame" x="98" y="59" width="47" height="21.5"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="to7-u6-QX0" firstAttribute="leading" secondItem="eqw-8H-qEk" secondAttribute="leading" constant="8" id="3Zz-GP-OMg"/>
+                                                <constraint firstItem="9hN-1i-WuH" firstAttribute="top" secondItem="cbi-Yv-92l" secondAttribute="bottom" constant="5" id="Kvf-zy-6iH"/>
+                                                <constraint firstItem="cbi-Yv-92l" firstAttribute="leading" secondItem="to7-u6-QX0" secondAttribute="trailing" constant="20" id="QDH-tW-PRk"/>
+                                                <constraint firstItem="to7-u6-QX0" firstAttribute="top" secondItem="eqw-8H-qEk" secondAttribute="top" constant="25" id="TAA-Lr-rS2"/>
+                                                <constraint firstItem="9hN-1i-WuH" firstAttribute="leading" secondItem="cbi-Yv-92l" secondAttribute="leading" id="Wd0-RC-2Tg"/>
+                                                <constraint firstItem="cbi-Yv-92l" firstAttribute="centerY" secondItem="to7-u6-QX0" secondAttribute="centerY" constant="-15" id="cfU-vk-dbM"/>
+                                                <constraint firstAttribute="bottom" secondItem="to7-u6-QX0" secondAttribute="bottom" constant="25" id="ifF-tb-c3y"/>
+                                            </constraints>
                                         </collectionViewCellContentView>
-                                        <size key="customSize" width="411" height="107"/>
+                                        <size key="customSize" width="403" height="120"/>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TodayBenefitCell" id="5c0-Ep-U8g" customClass="TodayBenefitCell" customModule="TossBenefit" customModuleProvider="target">
-                                        <rect key="frame" x="1.5" y="117" width="411" height="240"/>
+                                        <rect key="frame" x="5.5" y="130" width="403" height="250"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="D9i-Kk-8Od">
-                                            <rect key="frame" x="0.0" y="0.0" width="411" height="240"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="403" height="250"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dib-fu-8bb">
+                                                    <rect key="frame" x="176.5" y="29" width="50" height="71"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="70" id="CEz-Ru-TQr"/>
+                                                        <constraint firstAttribute="width" constant="50" id="rho-HE-rAH"/>
+                                                    </constraints>
+                                                    <imageReference key="image" image="sparkles" catalog="system" renderingMode="original"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d7Y-FI-kgG">
+                                                    <rect key="frame" x="170.5" y="120" width="62" height="29"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fQz-au-4dh">
+                                                    <rect key="frame" x="150" y="169" width="103" height="42"/>
+                                                    <color key="backgroundColor" name="AccentColor"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                    <inset key="contentEdgeInsets" minX="20" minY="10" maxX="20" maxY="10"/>
+                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                    <state key="normal" title="클릭하기">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="d7Y-FI-kgG" firstAttribute="centerX" secondItem="D9i-Kk-8Od" secondAttribute="centerX" id="6NV-0e-m7c"/>
+                                                <constraint firstItem="dib-fu-8bb" firstAttribute="top" secondItem="D9i-Kk-8Od" secondAttribute="top" constant="30" id="9Vg-93-19t"/>
+                                                <constraint firstItem="d7Y-FI-kgG" firstAttribute="top" secondItem="dib-fu-8bb" secondAttribute="bottom" constant="20" id="JDC-ES-ZDA"/>
+                                                <constraint firstAttribute="bottom" secondItem="fQz-au-4dh" secondAttribute="bottom" constant="39" id="n8q-x3-QR9"/>
+                                                <constraint firstItem="dib-fu-8bb" firstAttribute="centerX" secondItem="D9i-Kk-8Od" secondAttribute="centerX" id="rO7-dB-Tdz"/>
+                                                <constraint firstItem="fQz-au-4dh" firstAttribute="top" secondItem="d7Y-FI-kgG" secondAttribute="bottom" constant="20" id="vm7-dy-t2M"/>
+                                                <constraint firstItem="fQz-au-4dh" firstAttribute="centerX" secondItem="D9i-Kk-8Od" secondAttribute="centerX" id="wwL-ov-huT"/>
+                                            </constraints>
                                         </collectionViewCellContentView>
-                                        <size key="customSize" width="411" height="240"/>
+                                        <size key="customSize" width="403" height="250"/>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BenefitCell" id="IEw-YN-6C6" customClass="BenefitCell" customModule="TossBenefit" customModuleProvider="target">
-                                        <rect key="frame" x="1.5" y="367" width="411" height="107"/>
+                                        <rect key="frame" x="5.5" y="390" width="403" height="120"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Rq1-wu-BFv">
-                                            <rect key="frame" x="0.0" y="0.0" width="411" height="107"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="403" height="120"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fEJ-XB-ueE">
+                                                    <rect key="frame" x="8" y="20" width="80" height="80"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="80" id="c77-ep-tB3"/>
+                                                        <constraint firstAttribute="width" constant="80" id="uA0-uY-MxV"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EvP-rK-dW4">
+                                                    <rect key="frame" x="108" y="61" width="47" height="21.5"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                    <color key="textColor" name="AccentColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Puj-0d-j3r">
+                                                    <rect key="frame" x="108" y="34.5" width="44" height="21.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <color key="textColor" systemColor="systemGrayColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="fEJ-XB-ueE" secondAttribute="bottom" constant="20" id="LGR-rV-mqr"/>
+                                                <constraint firstItem="Puj-0d-j3r" firstAttribute="leading" secondItem="fEJ-XB-ueE" secondAttribute="trailing" constant="20" id="UXX-10-iap"/>
+                                                <constraint firstItem="EvP-rK-dW4" firstAttribute="leading" secondItem="Puj-0d-j3r" secondAttribute="leading" id="WUq-fW-UxU"/>
+                                                <constraint firstItem="fEJ-XB-ueE" firstAttribute="centerY" secondItem="Rq1-wu-BFv" secondAttribute="centerY" id="dFR-1Q-6u0"/>
+                                                <constraint firstItem="fEJ-XB-ueE" firstAttribute="top" secondItem="Rq1-wu-BFv" secondAttribute="top" constant="20" id="g7N-jG-c6E"/>
+                                                <constraint firstItem="fEJ-XB-ueE" firstAttribute="leading" secondItem="Rq1-wu-BFv" secondAttribute="leading" constant="8" id="jpe-j4-j17"/>
+                                                <constraint firstItem="Puj-0d-j3r" firstAttribute="centerY" secondItem="fEJ-XB-ueE" secondAttribute="centerY" constant="-15" id="qjt-Tw-uZO"/>
+                                                <constraint firstItem="EvP-rK-dW4" firstAttribute="top" secondItem="Puj-0d-j3r" secondAttribute="bottom" constant="5" id="tEc-Zp-XHP"/>
+                                            </constraints>
                                         </collectionViewCellContentView>
-                                        <size key="customSize" width="411" height="107"/>
+                                        <size key="customSize" width="403" height="120"/>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -95,8 +193,15 @@
         </scene>
     </scenes>
     <resources>
+        <image name="sparkles" catalog="system" width="112" height="128"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

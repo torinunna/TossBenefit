@@ -67,6 +67,11 @@
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="403" height="120"/>
+                                        <connections>
+                                            <outlet property="descriptionLabel" destination="cbi-Yv-92l" id="7bg-Nq-CFK"/>
+                                            <outlet property="iconView" destination="to7-u6-QX0" id="vyX-lZ-C1k"/>
+                                            <outlet property="pointLabel" destination="9hN-1i-WuH" id="6nb-Of-eWU"/>
+                                        </connections>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TodayBenefitCell" id="5c0-Ep-U8g" customClass="TodayBenefitCell" customModule="TossBenefit" customModuleProvider="target">
                                         <rect key="frame" x="5.5" y="130" width="403" height="250"/>
@@ -111,6 +116,10 @@
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="403" height="250"/>
+                                        <connections>
+                                            <outlet property="ctaButton" destination="fQz-au-4dh" id="CnB-hh-t9a"/>
+                                            <outlet property="titleLabel" destination="d7Y-FI-kgG" id="ZvQ-FW-dww"/>
+                                        </connections>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BenefitCell" id="IEw-YN-6C6" customClass="BenefitCell" customModule="TossBenefit" customModuleProvider="target">
                                         <rect key="frame" x="5.5" y="390" width="403" height="120"/>
@@ -151,6 +160,11 @@
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="403" height="120"/>
+                                        <connections>
+                                            <outlet property="benefitImage" destination="fEJ-XB-ueE" id="1ns-iZ-Tj9"/>
+                                            <outlet property="descriptionLabel" destination="Puj-0d-j3r" id="4hi-Mi-cK8"/>
+                                            <outlet property="titleLabel" destination="EvP-rK-dW4" id="yNY-Uf-fbK"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>

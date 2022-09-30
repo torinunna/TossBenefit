@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Combine
 
 class BenefitListViewController: UIViewController {
     
@@ -18,13 +19,26 @@ class BenefitListViewController: UIViewController {
     }
     
     var datasource: UICollectionViewDiffableDataSource<Section, Item>!
-    
-    var todaySectionItems: [AnyHashable] = TodaySectionItem(point: .default, today: .today).sectionItems
-    var otherSectionItems: [AnyHashable] = Benefit.others
 
+    @Published var todaySectionItems: [AnyHashable] = []
+    @Published var otherSectionItems: [AnyHashable] = []
+    
+    var subscriptions = Set<AnyCancellable>()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setUpUI()
+        configureCollectionView()
+        bind()
+        
+    }
+    
+    private func setUpUI() {
+        navigationItem.title = "혜택"
+    }
+    
+    private func configureCollectionView() {
         datasource = UICollectionViewDiffableDataSource<Section, Item>(collectionView: collectionView, cellProvider: { collectionView, indexPath, item in
             guard let section = Section(rawValue: indexPath.section) else { return nil }
             let cell = self.configureCell(for: section, item: item, collectionView: collectionView, indexPath: indexPath)
@@ -40,8 +54,37 @@ class BenefitListViewController: UIViewController {
         collectionView.collectionViewLayout = layout()
         collectionView.delegate = self
 
-        navigationItem.title = "혜택"
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            self.todaySectionItems = TodaySectionItem(point: .default, today: .today).sectionItems
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            self.otherSectionItems = Benefit.others
+        }
+    }
+    
+    private func bind() {
+        $todaySectionItems
+            .receive(on: RunLoop.main)
+            .sink { items in
+                self.applySnapshot(items: items, section: .today)
+            }.store(in: &subscriptions)
+        
+        $otherSectionItems
+            .receive(on: RunLoop.main)
+            .sink { items in
+                self.applySnapshot(items: items, section: .other)
+            }.store(in: &subscriptions)
+    }
+    
+    private func applySnapshot(items: [Item], section: Section) {
+        var snapshot = datasource.snapshot()
+        snapshot.appendItems(items, toSection: section)
+        datasource.apply(snapshot)
     }
     
     private func configureCell(for section: Section, item: Item, collectionView: UICollectionView, indexPath: IndexPath) -> UICollectionViewCell? {

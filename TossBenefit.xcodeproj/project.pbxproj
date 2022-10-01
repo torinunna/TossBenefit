@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		860134F428E88789002F8260 /* BenefitListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860134F328E88789002F8260 /* BenefitListViewModel.swift */; };
+		860134F628E8AE66002F8260 /* MyPointViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860134F528E8AE66002F8260 /* MyPointViewModel.swift */; };
 		8611D58028E6D5FB0055E27C /* BenefitGuideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8611D57F28E6D5FB0055E27C /* BenefitGuideView.swift */; };
 		8631363428E4989E00D3C282 /* ButtonBenefit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8631363328E4989E00D3C282 /* ButtonBenefit.storyboard */; };
 		8631363628E498A700D3C282 /* ButtonBenefitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8631363528E498A700D3C282 /* ButtonBenefitViewController.swift */; };
@@ -50,6 +51,7 @@
 
 /* Begin PBXFileReference section */
 		860134F328E88789002F8260 /* BenefitListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BenefitListViewModel.swift; sourceTree = "<group>"; };
+		860134F528E8AE66002F8260 /* MyPointViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPointViewModel.swift; sourceTree = "<group>"; };
 		8611D57F28E6D5FB0055E27C /* BenefitGuideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BenefitGuideView.swift; sourceTree = "<group>"; };
 		8631363328E4989E00D3C282 /* ButtonBenefit.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ButtonBenefit.storyboard; sourceTree = "<group>"; };
 		8631363528E498A700D3C282 /* ButtonBenefitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonBenefitViewController.swift; sourceTree = "<group>"; };
@@ -194,6 +196,7 @@
 			children = (
 				86F27F7928E2F0BD000B64E8 /* MyPoint.storyboard */,
 				86F27F7728E2F08A000B64E8 /* MyPointViewController.swift */,
+				860134F528E8AE66002F8260 /* MyPointViewModel.swift */,
 			);
 			path = MyPoint;
 			sourceTree = "<group>";
@@ -341,6 +344,7 @@
 				865C730128DC84850046AF9B /* AppDelegate.swift in Sources */,
 				860134F428E88789002F8260 /* BenefitListViewModel.swift in Sources */,
 				8689CBF428DDDA9300641489 /* MyPointCell.swift in Sources */,
+				860134F628E8AE66002F8260 /* MyPointViewModel.swift in Sources */,
 				865C730328DC84850046AF9B /* SceneDelegate.swift in Sources */,
 				8631363928E498FE00D3C282 /* BenefitDetails.swift in Sources */,
 				86F27F7828E2F08A000B64E8 /* MyPointViewController.swift in Sources */,
